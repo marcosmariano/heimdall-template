@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db_dev:
+    image: postgres:9.5.5
+    restart: always
+    environment:
+      - POSTGRES_DB=burns
+      - POSTGRES_USER=burns
+      - POSTGRES_PASSWORD=burns
+    expose:
+      - '5432'
+    ports:
+      - '5432:5432'
+
