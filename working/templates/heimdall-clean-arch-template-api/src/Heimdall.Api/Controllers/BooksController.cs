@@ -20,6 +20,10 @@ namespace Heimdall.Api.Controllers
     {
         private readonly IMapper _mapper;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="mapper">Automapper instance</param>
         public BooksController(IMapper mapper)
         {
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
