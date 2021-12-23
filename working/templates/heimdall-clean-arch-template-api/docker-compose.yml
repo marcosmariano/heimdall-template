@@ -4,9 +4,9 @@ services:
     image: postgres:9.5.5
     restart: always
     environment:
-      - POSTGRES_DB=burns
-      - POSTGRES_USER=burns
-      - POSTGRES_PASSWORD=burns
+      - POSTGRES_DB=heimdall
+      - POSTGRES_USER=heimdall
+      - POSTGRES_PASSWORD=heimdall
     expose:
       - '5432'
     ports:
