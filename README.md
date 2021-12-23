@@ -1,2 +1,2 @@
 # heimdall-template
-.NET 6 template using Clean Architecture
+.NET 6 templates using Clean Architecture
