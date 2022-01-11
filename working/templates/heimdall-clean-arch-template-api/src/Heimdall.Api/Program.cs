@@ -1,7 +1,3 @@
-using Cabother.Swagger.UI.Extensions;
-using Microsoft.AspNetCore.Diagnostics.HealthChecks;
-using Swashbuckle.AspNetCore.Swagger;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
