@@ -7,8 +7,8 @@ namespace Heimdall.Api.ViewModels.Book
     /// </summary>
     public class BookViewModelRequest
     {
-        string Name { get; set; }
-        string Description { get; set; }
+        string? Name { get; set; }
+        string? Description { get; set; }
         double Value { get; set; }
     }
 
@@ -18,7 +18,7 @@ namespace Heimdall.Api.ViewModels.Book
     public class BookViewModelResponse
     {
         Guid Id { get; set; }
-        string Name { get; set; }
-        string Description { get; set; }
+        string? Name { get; set; }
+        string? Description { get; set; }
     }
 }

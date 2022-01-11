@@ -10,16 +10,16 @@ namespace Heimdall.Api.ViewModels
         public int? Status { get; set; }
         
         [JsonPropertyName("userMessage")]
-        public string UserMessage { get; set; }
+        public string? UserMessage { get; set; }
         
         [JsonPropertyName("detail")]
-        public string Detail { get; set; }
+        public string? Detail { get; set; }
         
         [JsonPropertyName("errorCode")]
-        public string ErrorCode { get; set; }
+        public string? ErrorCode { get; set; }
 
         [JsonPropertyName("type")]
-        public string Type { get; set; }
+        public string? Type { get; set; }
         
         [JsonExtensionData]
         public Dictionary<string, object> Extensions { get; set; } =
