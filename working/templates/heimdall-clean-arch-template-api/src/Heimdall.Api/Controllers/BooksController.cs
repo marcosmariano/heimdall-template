@@ -1,4 +1,6 @@
+using System;
 using System.Net;
+using System.Threading.Tasks;
 using AutoMapper;
 using Heimdall.Api.Middlewares;
 using Heimdall.Api.ViewModels;
@@ -12,10 +14,8 @@ namespace Heimdall.Api.Controllers
     /// Books endpoints
     /// </summary>
     [ApiController]
-    [ApiVersion("2")]
-    [ApiExplorerSettings(GroupName = "v2")]
     [ServiceFilter(typeof(ApiExceptionsMiddleware))]
-    [Route("api/v{version:apiVersion}/books")]
+    [Route("api/v1/books")]
     public class BooksController
     {
         private readonly IMapper _mapper;

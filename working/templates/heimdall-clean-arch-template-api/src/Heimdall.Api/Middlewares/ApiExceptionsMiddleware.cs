@@ -1,9 +1,12 @@
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using Cabother.Exceptions;
 using Cabother.Exceptions.Databases;
 using Cabother.Exceptions.Requests;
 using FluentValidation;
 using Heimdall.Api.ViewModels;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -24,7 +27,7 @@ namespace Heimdall.Api.Middlewares
             {
                 Status = 500,
                 UserMessage = context.Exception.Message,
-                Detail = _env.IsDevelopment() ? context.Exception.ToString() : "",
+                Detail = context.Exception.ToString(),
                 Type = context.Exception.GetType().Name,
                 ErrorCode = context.Exception is BaseException baseException ? baseException.ErrorCode : ""
             };

@@ -1,3 +1,5 @@
+using System;
+
 namespace Heimdall.Api.ViewModels.Book
 {
     /// <summary>
