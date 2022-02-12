@@ -19,7 +19,7 @@ namespace Heimdall.Infrastructure.Repository
 
             builder.UseNpgsql(connectionString.ToString(),options=>
             {
-                options.SetPostgresVersion(new Version(9,5));
+                options.SetPostgresVersion(new Version(10,5));
             });
 
             return new AppDbContext(builder.Options);
