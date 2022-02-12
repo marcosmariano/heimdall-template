@@ -15,8 +15,8 @@ namespace Heimdall.Api.Controllers
     /// </summary>
     [ApiController]
     [ServiceFilter(typeof(ApiExceptionsMiddleware))]
-    [Route("api/v1/books")]
-    public class BooksController
+    [Route("api/v1/worlds")]
+    public class WorldsController
     {
         private readonly IMapper _mapper;
 
@@ -24,7 +24,7 @@ namespace Heimdall.Api.Controllers
         /// Constructor
         /// </summary>
         /// <param name="mapper">Automapper instance</param>
-        public BooksController(IMapper mapper)
+        public WorldsController(IMapper mapper)
         {
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
@@ -36,14 +36,14 @@ namespace Heimdall.Api.Controllers
         /// <returns>Inserted Book</returns>
         [HttpPost(Name = "CreatePrinter")]
         [SwaggerOperation(
-            Summary = "Insert new book",
-            Description = "Insert new book in database",
-            OperationId = "InsertBook",
-            Tags = new[] { "books" })]
-        [SwaggerResponse((int)HttpStatusCode.Created, "Book created", typeof(SuccessResponseViewModel<BookViewModelResponse>))]
+            Summary = "Insert new world",
+            Description = "Insert new world for Bifrost",
+            OperationId = "InsertWorld",
+            Tags = new[] { "worlds" })]
+        [SwaggerResponse((int)HttpStatusCode.Created, "World created", typeof(SuccessResponseViewModel<BookViewModelResponse>))]
         [SwaggerResponse((int)HttpStatusCode.BadRequest, "Wrong Information", typeof(ErrorResponseViewModel))]
         [SwaggerResponse((int)HttpStatusCode.InternalServerError, "Internal Error", typeof(ErrorResponseViewModel))]
-        public async Task<IActionResult> CreatePrinterAsync([FromBody] BookViewModelRequest request)
+        public async Task<IActionResult> CreateWorldAsync([FromBody] BookViewModelRequest request)
         {
             return new OkResult();
         }
