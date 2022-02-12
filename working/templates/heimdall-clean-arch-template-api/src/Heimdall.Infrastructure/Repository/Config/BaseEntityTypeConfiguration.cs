@@ -21,7 +21,6 @@ namespace Heimdall.Infrastructure.Repository.Config
                 .HasColumnName("updated_at")
                 .ValueGeneratedOnAddOrUpdate();
             
-
             ConfigureEntity(builder);
         }
 
