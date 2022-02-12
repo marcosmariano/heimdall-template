@@ -1,12 +1,9 @@
 namespace Heimdall.Domain
 {
-    public class World
+    public class World : BaseEntity<Guid>
     {
-        Guid Id { get; set; }
-        string? Name { get; set; }
-        string? Description { get; set; }
-        double Value { get; set; }
-        DateTime CreatedAt { get; set; }
-        DateTime UpdatedAt { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
+        public double Size { get; set; }
     }
 }

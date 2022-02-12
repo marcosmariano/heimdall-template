@@ -10,7 +10,7 @@ namespace Heimdall.Infrastructure.Repository
         {
 
         }
-
+        public const string Schema = "heimdall";
         protected override void OnModelCreating(ModelBuilder modelBuilder) => modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
     }

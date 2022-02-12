@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Heimdall.Infrastructure\Heimdall.Infrastructure.csproj" />
+    <ProjectReference Include="..\Heimdall.Infrastructure\Heimdall.Domain.csproj" />
   </ItemGroup>
 
 </Project>
