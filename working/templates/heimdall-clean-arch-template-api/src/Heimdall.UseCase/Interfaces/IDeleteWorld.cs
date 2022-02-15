@@ -1,7 +1,9 @@
+using Heimdall.Domain;
+
 namespace Heimdall.UseCase.Interfaces
 {
     public interface IDeleteWorld
     {
-        Task DeleteWorldAsync(IGetWorlds world);
+        Task DeleteWorldAsync(World world);
     }
 }

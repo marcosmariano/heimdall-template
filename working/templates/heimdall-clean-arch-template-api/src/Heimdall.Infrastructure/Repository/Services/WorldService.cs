@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Heimdall.Infrastructure.Repository.Services
 {
-    public sealed class WorldService : IBaseService<World, Guid>
+    public sealed class WorldService : IWorldService
     {
         private bool disposedValue;
         private readonly AppDbContext _context;
@@ -24,7 +24,9 @@ namespace Heimdall.Infrastructure.Repository.Services
             if (disposedValue)
                 throw new ObjectDisposedException(nameof(WorldService));
 
+            _logger.LogInformation("Adding entity into the context");
             await _context.Worlds.AddAsync(entity);
+            _logger.LogInformation("Saving changes into the context");
             await _context.SaveChangesAsync();
 
             return entity;
@@ -57,6 +59,7 @@ namespace Heimdall.Infrastructure.Repository.Services
             if (disposedValue)
                 throw new ObjectDisposedException(nameof(WorldService));
 
+            _logger.LogInformation("Removing registry");
             return Task.FromResult(_context.Worlds.Remove(entity));
         }
 

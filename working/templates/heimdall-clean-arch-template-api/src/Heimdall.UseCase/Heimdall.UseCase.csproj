@@ -7,5 +7,6 @@
   </PropertyGroup>
   <ItemGroup>
         <ProjectReference Include="..\Heimdall.Domain\Heimdall.Domain.csproj" />
+        <ProjectReference Include="..\Heimdall.Infrastructure\Heimdall.Infrastructure.csproj" />
   </ItemGroup>
 </Project>
